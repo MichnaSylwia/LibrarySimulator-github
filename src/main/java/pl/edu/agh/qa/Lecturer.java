@@ -2,13 +2,17 @@ package pl.edu.agh.qa;
 
 
 public class Lecturer extends User {
-    public static final int MAX_RENTS = 10;
-    char type = 'L';
 
     public Lecturer(String firstName, String lastName) {
         super(firstName, lastName);
 
     }
+
+    @Override
+    protected char getUserType() {
+        return 'L';
+    }
+
     public int getMaxRentItems() {
         return 10;
     }
@@ -19,7 +23,7 @@ public class Lecturer extends User {
     }
 
     public String toString() {
-        return firstName + ';' + lastName + ';' + cardID + ';' + type;
+        return firstName + ';' + lastName + ';' + cardID + ';' + getUserType();
 
     }
 }

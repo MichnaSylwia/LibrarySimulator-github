@@ -12,18 +12,18 @@ public class LibrarySimulator {
         final Lecturer user4 = new Lecturer("Felix", "Smart");
 
 //list of items
-        Item item1 = new Book("J.Conrad", "Heart of Darkness");
-        Item item2 = new Magazine("01/2022", "National Geographic");
-        Item item3 = new Book("J.Conrad", "Heart of Darkness");
-        Item item4 = new Magazine("01/2022", "National Geographic");
-        Item item5 = new Book("R. Ludlum", "The Bourne Identity");
-        Item item6 = new Magazine("07/2017", "Scientific American");
-        Item item7 = new Magazine("03/2015", "Reader's Digest");
-        Item item8 = new Magazine("10/2021", "Sports Illustrated");
-        Item item9 = new Magazine("02/2022", "The American Legion Magazine");
-        Item item10 = new Book("L.Foley", "The Paris Apartment");
-        Item item11 = new Book("M.Sadler", "It’s Not Easy Being a Bunny");
-        Item item12 = new Book("M.Sadler", "It’s Not Easy Being a Bunny");
+        Book item1 = new Book("J.Conrad", "Heart of Darkness");
+        Magazine item2 = new Magazine("01/2022", "National Geographic");
+        Book item3 = new Book("J.Conrad", "Heart of Darkness");
+        Magazine item4 = new Magazine("01/2022", "National Geographic");
+        Book item5 = new Book("R. Ludlum", "The Bourne Identity");
+        Magazine item6 = new Magazine("07/2017", "Scientific American");
+        Magazine item7 = new Magazine("03/2015", "Reader's Digest");
+        Magazine item8 = new Magazine("10/2021", "Sports Illustrated");
+        Magazine item9 = new Magazine("02/2022", "The American Legion Magazine");
+        Book item10 = new Book("L.Foley", "The Paris Apartment");
+        Book item11 = new Book("M.Sadler", "It’s Not Easy Being a Bunny");
+        Book item12 = new Book("M.Sadler", "It’s Not Easy Being a Bunny");
 
 //add user to Library
         library.addUserToLibrary(user1);
@@ -47,5 +47,6 @@ public class LibrarySimulator {
         library.addManyItemsToLibrary(item8, 12);
         library.addManyItemsToLibrary(item9, 6);
         library.addManyItemsToLibrary(item10, 21);
+        
     }
 }

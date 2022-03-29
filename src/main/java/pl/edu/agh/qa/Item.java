@@ -2,9 +2,8 @@ package pl.edu.agh.qa;
 
 import java.util.Objects;
 
-public class Item {
-    String title;
-
+public abstract class Item {
+    private final String title;
 
     public Item(String title) {
         this.title = title;
@@ -38,6 +37,10 @@ public class Item {
             return false;
         }
         return true;
+    }
+
+    protected boolean canEqual(Object other) {
+        return other instanceof Item;
     }
 
     @Override

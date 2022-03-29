@@ -3,13 +3,12 @@ package pl.edu.agh.qa;
 import java.util.Objects;
 
 public class Book extends Item {
-    String author;
+    private final String author;
 
 
     public Book(String author, String title) {
         super(title);
         this.author = author;
-
     }
 
     @Override
@@ -35,6 +34,10 @@ public class Book extends Item {
         return true;
     }
 
+    protected boolean canEqual(Object other) {
+        return other instanceof Book;
+    }
+
     @Override
     public String toString() {
         return String.format("%s;%s", super.toString(), author);
@@ -43,9 +46,4 @@ public class Book extends Item {
     public String getAuthor() {
         return author;
     }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
 }
