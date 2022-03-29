@@ -38,5 +38,7 @@ public abstract class User {
         return rents;
     }
 
+    public abstract int getMaxRentItems();
+
 }
 

@@ -47,13 +47,5 @@ public class LibrarySimulator {
         library.addManyItemsToLibrary(item8, 12);
         library.addManyItemsToLibrary(item9, 6);
         library.addManyItemsToLibrary(item10, 21);
-
-// rent item to user
-        library.rentItemToUser(item1,user3);
-        user3.getRents();
-
-
-
-
     }
 }

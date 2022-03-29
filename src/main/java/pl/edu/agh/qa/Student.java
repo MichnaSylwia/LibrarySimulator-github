@@ -9,6 +9,9 @@ public class Student extends User {
         super(firstName, lastName);
 
     }
+    public int getMaxRentItems() {
+        return 4;
+    }
 
     @Override
     public boolean canRent(Item item) {

@@ -8,25 +8,28 @@ public class ItemDetails {
         this(1, 1);
     }
 
-    private ItemDetails(int totalQuantity, int currentQuantity) {
-        this.totalQuantity = totalQuantity;
-        this.currentQuantity = currentQuantity;
+    public void decreaseCurrentQuantity() {
+        if (this.currentQuantity > 0) {
+            --this.currentQuantity;
+        }
+
+    }
+
+    public void increaseQuantity() {
+        ++this.totalQuantity;
+        ++this.currentQuantity;
     }
 
     public int getTotalQuantity() {
-        return totalQuantity;
+        return this.totalQuantity;
     }
 
     public int getCurrentQuantity() {
-        return currentQuantity;
+        return this.currentQuantity;
     }
 
-    public void decreaseCurrentQuantity() {
-        this.currentQuantity = currentQuantity--;
-    }
-
-    void increaseQuantity() {
-        this.currentQuantity++;
-        this.totalQuantity++;
+    public ItemDetails(int totalQuantity, int currentQuantity) {
+        this.totalQuantity = totalQuantity;
+        this.currentQuantity = currentQuantity;
     }
 }
