@@ -5,13 +5,13 @@ public class LibrarySimulator {
 
         Library library = new Library();
 
-//list of users
+        //list of users
         final Student user1 = new Student("John", "Wilson");
         final Student user2 = new Student("Jennifer", "Brown");
         final Lecturer user3 = new Lecturer("Felix", "Smart");
         final Lecturer user4 = new Lecturer("Felix", "Smart");
 
-//list of items
+        //list of items
         Book item1 = new Book("J.Conrad", "Heart of Darkness");
         Magazine item2 = new Magazine("01/2022", "National Geographic");
         Book item3 = new Book("J.Conrad", "Heart of Darkness");
@@ -25,13 +25,13 @@ public class LibrarySimulator {
         Book item11 = new Book("M.Sadler", "It’s Not Easy Being a Bunny");
         Book item12 = new Book("M.Sadler", "It’s Not Easy Being a Bunny");
 
-//add user to Library
+        //add user to Library
         library.addUserToLibrary(user1);
         library.addUserToLibrary(user2);
         library.addUserToLibrary(user3);
         library.addUserToLibrary(user4);
 
-//add single item to Library
+        //add single item to Library
         library.addItemToLibrary(item1);
         library.addItemToLibrary(item2);
         library.addItemToLibrary(item3);
@@ -39,7 +39,7 @@ public class LibrarySimulator {
         library.addItemToLibrary(item11);
         library.addItemToLibrary(item12);
 
-//add many items to Library
+        //add many items to Library
         library.addManyItemsToLibrary(item5, 30);
         library.addManyItemsToLibrary(item4, 25);
         library.addManyItemsToLibrary(item6, 9);
@@ -48,13 +48,20 @@ public class LibrarySimulator {
         library.addManyItemsToLibrary(item9, 6);
         library.addManyItemsToLibrary(item10, 21);
 
-  /* Test: Import items from file import_items.txt
-      library.importItemsFromFile("/home/acer/Documents/AGH/LibrarySimulator-github/import_items.txt");
-   */
+    /*
+    Test: Import items from file import_items.txt
+    library.importItemsFromFile("import_items.txt");
+    */
 
-//rent items to users
+
+        //rent items to users
         library.rentItem(item1, user1);
-        library.rentItem(item8, user1);
-        library.rentItem(item1,user3);
+        library.rentItem(item2, user1);
+        library.rentItem(item1, user2);
+
+    /*
+    Test: Export items from file import_items.txt
+    library.exportUsersWithItemsToFile("users_with_items.txt");
+    */
     }
 }

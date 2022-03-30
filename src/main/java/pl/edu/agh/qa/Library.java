@@ -1,14 +1,12 @@
 package pl.edu.agh.qa;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
-import java.util.stream.Collectors;
+
 
 public class Library {
 
@@ -125,22 +123,23 @@ public class Library {
     }
 
     public void exportUsersWithItemsToFile(String csvFile) {
-
-        List<String> rec = users.stream().filter(user -> user.getRentsCount() > 0)
-                .map((user) ->
-                {
-                    return String.format("%s[%s]",
-                            user.getCardID(),
-                            user.getRents().stream().map(rent -> rent.toString())
-                                    .collect(Collectors.reducing("",
-                                            (str1, str2) -> str1 + ";" + str2)));
-                }).collect(Collectors.toList());
+        String FILE_PATH = "users_with_items.txt";
+        Path filePath = Paths.get(FILE_PATH);
 
         try {
-            Files.write(Paths.get(csvFile), rec, Charset.defaultCharset());
-        } catch (IOException ex) {
+            Files.writeString(filePath, textToAddToFile(), StandardOpenOption.CREATE);
+        } catch (IOException e) {
             System.out.println("Unable to add text to the file");
         }
+    }
 
+    public String textToAddToFile() {
+        String text = null;
+        while (userItems.size() > 0) {
+            text = getUserItems().toString();
+            break;
+        }
+        return text;
     }
 }
+
