@@ -1,5 +1,8 @@
 package pl.edu.agh.qa;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -54,8 +57,8 @@ public class Library {
 
                         String.format("%s;%d;%d",
                                 entry.getKey(),
-                                entry.getValue().getCurrentQuantity(),
-                                entry.getValue().getTotalQuantity())
+                                entry.getValue().getTotalQuantity(),
+                                entry.getValue().getCurrentQuantity())
 
                 ).forEach(System.out::println);
     }
@@ -122,6 +125,7 @@ public class Library {
     }
 
     public void exportUsersWithItemsToFile(String csvFile) {
+
         List<String> rec = users.stream().filter(user -> user.getRentsCount() > 0)
                 .map((user) ->
                 {
@@ -137,5 +141,6 @@ public class Library {
         } catch (IOException ex) {
             System.out.println("Unable to add text to the file");
         }
+
     }
 }

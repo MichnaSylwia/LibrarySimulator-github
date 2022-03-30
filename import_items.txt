@@ -1,0 +1,9 @@
+Winter’s Bone;Daniel Woodrell;3;B
+The Bourne Identity;R. Ludlum;9;B
+In The Woods;Tana French;1;B
+Alias Grace;Margaret Atwood;7;B
+The Hunt For Red October;Tom Clancy;2;B
+Tess Gerritsen;The Surgeon;13;B
+Nature’s Home;1/2011;15;M
+Vogue;04/2022;6;M
+National Geographic;01/2022;5;M

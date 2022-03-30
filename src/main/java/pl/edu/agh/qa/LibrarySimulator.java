@@ -47,6 +47,14 @@ public class LibrarySimulator {
         library.addManyItemsToLibrary(item8, 12);
         library.addManyItemsToLibrary(item9, 6);
         library.addManyItemsToLibrary(item10, 21);
-        
+
+  /* Test: Import items from file import_items.txt
+      library.importItemsFromFile("/home/acer/Documents/AGH/LibrarySimulator-github/import_items.txt");
+   */
+
+//rent items to users
+        library.rentItem(item1, user1);
+        library.rentItem(item8, user1);
+        library.rentItem(item1,user3);
     }
 }
