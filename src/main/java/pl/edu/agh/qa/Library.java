@@ -127,16 +127,16 @@ public class Library {
         Path filePath = Paths.get(FILE_PATH);
 
         try {
-            Files.writeString(filePath, textToAddToFile(), StandardOpenOption.CREATE);
+            Files.writeString(filePath, textToAddToFile(userItems), StandardOpenOption.CREATE);
         } catch (IOException e) {
             System.out.println("Unable to add text to the file");
         }
     }
 
-    public String textToAddToFile() {
+    public String textToAddToFile(Map userItems) {
         String text = null;
         while (userItems.size() > 0) {
-            text = getUserItems().toString();
+            text = userItems.entrySet().toString();
             break;
         }
         return text;

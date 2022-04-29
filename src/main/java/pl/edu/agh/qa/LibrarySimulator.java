@@ -59,9 +59,8 @@ public class LibrarySimulator {
         library.rentItem(item2, user1);
         library.rentItem(item1, user2);
 
-    /*
-    Test: Export items from file import_items.txt
-    library.exportUsersWithItemsToFile("users_with_items.txt");
-    */
+        library.exportUsersWithItemsToFile("users_with_items.txt");
+
+
     }
 }
